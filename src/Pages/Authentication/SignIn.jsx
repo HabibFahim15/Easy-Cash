@@ -1,16 +1,17 @@
 import { Link } from "react-router-dom";
 
 const SignIn = () => {
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+  }
   return (
     <section className="bg-white dark:bg-[#010313]">
       <div className="container flex items-center justify-center min-h-screen px-6 mx-auto">
-        <form className="w-full max-w-md">
-          <img
-            className="w-auto h-7 sm:h-8"
-            src="https://merakiui.com/images/logo.svg"
-            alt="Logo"
-          />
-
+        <form onSubmit={handleSignIn} className="w-full max-w-md">
           <h1 className="mt-3 text-2xl font-semibold text-gray-800 capitalize sm:text-3xl dark:text-white">
             Sign In
           </h1>
@@ -36,6 +37,7 @@ const SignIn = () => {
 
             <input
               type="email"
+              name="email"
               className="block w-full py-3 text-gray-700 bg-white border rounded-lg px-11 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
               placeholder="Email address"
             />
@@ -62,6 +64,7 @@ const SignIn = () => {
 
             <input
               type="password"
+              name="password"
               className="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
               placeholder="Password"
             />
@@ -69,12 +72,11 @@ const SignIn = () => {
 
           {/* Submit Button */}
           <div className="mt-6">
-            <button
+            <input
+            value={'Sign In'}
               type="submit"
               className="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50"
-            >
-              Sign In
-            </button>
+            />
 
             {/* Divider */}
             <p className="mt-4 text-center text-gray-600 dark:text-gray-400">
