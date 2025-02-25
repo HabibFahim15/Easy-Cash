@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,11 +79,14 @@ const Navbar = () => {
             {/* User Profile and Notifications */}
             <div className="flex items-center mt-4 lg:mt-0">
               <button className="border rounded-full focus:outline-none mr-6">dar</button>
-              <button
+              <Link to={'/signin'} className="border rounded-2xl focus:outline-none hover:bg-amber-700 font-semibold hover:text-black px-5 py-2">Sign in</Link>
+              {/* profile */}
+              {/* <button
                 type="button"
                 className="flex items-center focus:outline-none"
                 aria-label="Toggle profile dropdown"
               >
+
                 <div className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
                   <img
                     src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
@@ -93,7 +97,7 @@ const Navbar = () => {
                 <h3 className="mx-2 text-gray-700 dark:text-gray-200 lg:hidden">
                   Khatab wedaa
                 </h3>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
