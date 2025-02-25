@@ -18,7 +18,7 @@ const Banner = () => {
         }}
         navigation={true}
         modules={[Autoplay,Pagination, Navigation]}
-        className="mySwiper my-8 md:my-16"
+        className="mySwiper my-4 md:my-8"
   >
     <SwiperSlide ><img className='w-auto h-[300px] md:w-[1450px] md:h-[650px]' src="https://c4.wallpaperflare.com/wallpaper/71/397/257/nature-full-size-desktop-7680x4320-wallpaper-preview.jpg" alt="" /></SwiperSlide>
     <SwiperSlide><img className='w-auto h-[300px] md:w-[1450px] md:h-[650px]' src="https://c4.wallpaperflare.com/wallpaper/856/564/920/nature-full-size-desktop-7680x4320-wallpaper-preview.jpg" alt="" /></SwiperSlide>
