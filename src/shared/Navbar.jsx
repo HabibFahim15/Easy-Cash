@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <nav className="relative bg-white shadow dark:bg-[#010313]">
-      <div className="container px-6 py-4 mx-auto">
+      <div className="container px-10 py-4 mx-auto">
         <div className="lg:flex lg:items-center lg:justify-between">
           {/* Logo and Mobile Menu Button */}
           <div className="flex items-center justify-between">
@@ -77,7 +77,7 @@ const Navbar = () => {
 
             {/* User Profile and Notifications */}
             <div className="flex items-center mt-4 lg:mt-0">
-
+              <button className="border rounded-full focus:outline-none mr-6">dar</button>
               <button
                 type="button"
                 className="flex items-center focus:outline-none"
