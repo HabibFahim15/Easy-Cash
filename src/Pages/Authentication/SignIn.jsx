@@ -1,12 +1,20 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const SignIn = () => {
+  const  {signIn} = useContext(AuthContext)
   const handleSignIn = (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+    signIn(email, password)
+    .then(result => {
+      const user = result.user;
+      console.log(user);
+    })
   }
   return (
     <section className="bg-white dark:bg-[#010313]">
